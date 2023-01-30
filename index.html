@@ -11,16 +11,25 @@
     <h1>Teams-Networking</h1>
     <input type="text" placeholder="Search">
     
+    <form onsubmit="return submitTeam()">
     <table id="table">
         <thead>
             <tr>
                 <th>Group</th>
                 <th>Members</th>
-                <th>Job Name</th>
-                <th>Profile</th>
+                <th>Project Name</th>
+                <th>URL</th>
+                <th></th>
             </tr>
         
         <tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>Salajan Bogdan</td>
+                <td>Automotive Electrician</td>
+                <td><a href="https://www.linkedin.com/in/bogdan-salajan-83167424a/">LinkedIn</a></td>
+            </tr>
+
             <tr>
                 <td>1</td>
                 <td>Salajan Bogdan</td>
@@ -44,12 +53,19 @@
                 <td>Alexandra Pop</td>
                 <td>Student</td>
                 <td><a href="https://www.facebook.com/ovidiu.muresan.581">Facebook</a></td>
-            </tr>
+            </tr> -->
         </tbody>
         <tfoot>
+            <td><input type="text" required name="group" placeholder="Group"></td>
+            <td><input type="text" required name="members" placeholder="Members"></td>
+            <td><input type="text" required name="name" placeholder="Project Name"></td>
+            <td><input type="text" required name="url" placeholder="URL"></td>
+            <td><button type="submit">Save</button></td>
 
         </tfoot>
     </table>
+    </form>
 
+<script src="function.js"></script>
 </body>
 </html>
