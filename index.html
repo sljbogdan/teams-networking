@@ -11,7 +11,7 @@
     <h1>Teams-Networking</h1>
     <input type="text" placeholder="Search">
     
-    <form onsubmit="return submitTeam()">
+    <form onsubmit="submitTeam();  return false;">
     <table id="table">
         <thead>
             <tr>
@@ -56,7 +56,7 @@
             </tr> -->
         </tbody>
         <tfoot>
-            <td><input type="text" required name="group" placeholder="Group"></td>
+            <td><input type="text" required name="promotion" placeholder="Promotion"></td>
             <td><input type="text" required name="members" placeholder="Members"></td>
             <td><input type="text" required name="name" placeholder="Project Name"></td>
             <td><input type="text" required name="url" placeholder="URL"></td>
