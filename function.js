@@ -17,7 +17,10 @@ function getTeamsAsHTML(teams){
                 <td>${team.members}</td>
                 <td>${team.name}</td>
                 <td>${team.url}</td>
-                <td>...</td>
+                <td>
+                    <a href="#" class="delete-btn" data-id="${team.id}">&#10006;</a>
+                    <a href="#" class="edit-btn">&#9998;</a>
+                </td>
                 </tr>`
     }).join('');
 }
@@ -51,18 +54,40 @@ function saveTeam(team){
     })
         .then(r => r.json())
         .then(status => {
-            console.warn('status after add', status);
             if(status.success){
-                window.location.reload();
+                loadTeams();
+                document.querySelector('form').reset();
             }
-        })
+        });
+}
+
+function deleteTeam(id){
+    fetch("http://localhost:3000/teams-json/delete", {
+    method: "DELETE",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({id:id})
+    })
+        .then(r => r.json())
+            .then(status => {
+                if(status.success){
+                    loadTeams();
+                }
+            });
 }
 
 function submitTeam() {
     const team = getTeamValues();
-    console.warn('add this value in teams.json', JSON.stringify(team));
-    saveTeam(team);
-   
+    saveTeam(team); 
 }
 
 loadTeams();
+
+document.querySelector('#table tbody').addEventListener("click", e => {
+    if(e.target.matches("a.delete-btn")){
+        const id = e.target.getAttribute("data-id");
+        deleteTeam(id);
+    }
+})
+
