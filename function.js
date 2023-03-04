@@ -135,8 +135,10 @@ document.querySelector('#table tbody').addEventListener("click", e => {
 document.getElementById("search").addEventListener("input", e => {
     const text = e.target.value.toLowerCase().toUpperCase();
     const filtered = allTeams.filter(team =>{
-        return team.members.toLowerCase().toUpperCase().includes(text);
+        return team.members.toLowerCase().toUpperCase().includes(text) || 
+        team.name.toLowerCase().toUpperCase().includes(text) || 
+        team.promotion.toLowerCase().toUpperCase().includes(text) || 
+        team.url.toLowerCase().toUpperCase().includes(text);
     })
-    console.warn(filtered);
     displayTeams(filtered);
 });
