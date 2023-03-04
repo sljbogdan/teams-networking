@@ -131,3 +131,12 @@ document.querySelector('#table tbody').addEventListener("click", e => {
     }
 })
 
+
+document.getElementById("search").addEventListener("input", e => {
+    const text = e.target.value.toLowerCase().toUpperCase();
+    const filtered = allTeams.filter(team =>{
+        return team.members.toLowerCase().toUpperCase().includes(text);
+    })
+    console.warn(filtered);
+    displayTeams(filtered);
+});

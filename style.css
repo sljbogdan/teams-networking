@@ -8,7 +8,7 @@
     font-weight: bold;
 }
 
-#table td,th{
+#table td,th {
     border-style:solid;
     border-color:rgb(0, 157, 255);
     border-width: 1px;
@@ -16,6 +16,6 @@
     padding: 5px;
 }
 
-button{
+button {
     padding: 0px 2px;
 }
