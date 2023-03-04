@@ -45,7 +45,6 @@ function getTeamValues(){
 }
 
 function setTeamValues(team){
-    console.warn("TODO edit", team);
     document.querySelector('[name=promotion]').value = team.promotion;
     document.querySelector('[name=members]').value = team.members;
     document.querySelector('[name=name]').value = team.name;

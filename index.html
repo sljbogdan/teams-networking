@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams-Networking</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Teams-Networking</h1>
     <input type="text" placeholder="Search">
     
-    <form onsubmit="submitTeam();  return false;">
+    <form onsubmit="submitTeam();  return false;" onreset="editId = 0">
     <table id="table">
         <thead>
             <tr>
@@ -23,44 +24,16 @@
             </tr>
         
         <tbody>
-            <!-- <tr>
-                <td>1</td>
-                <td>Salajan Bogdan</td>
-                <td>Automotive Electrician</td>
-                <td><a href="https://www.linkedin.com/in/bogdan-salajan-83167424a/">LinkedIn</a></td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Salajan Bogdan</td>
-                <td>Automotive Electrician</td>
-                <td><a href="https://www.linkedin.com/in/bogdan-salajan-83167424a/">LinkedIn</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Bonat Paula</td>
-                <td>Current operations administrator</td>
-                <td><a href="https://www.linkedin.com/in/paula-bonat-0b1455244/">LinkedIn</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Muresan Ovidiu</td>
-                <td>Student</td>
-                <td><a href="https://www.facebook.com/alexandra.pop.545">Facebook</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Alexandra Pop</td>
-                <td>Student</td>
-                <td><a href="https://www.facebook.com/ovidiu.muresan.581">Facebook</a></td>
-            </tr> -->
         </tbody>
         <tfoot>
             <td><input type="text" required name="promotion" placeholder="Promotion"></td>
             <td><input type="text" required name="members" placeholder="Members"></td>
             <td><input type="text" required name="name" placeholder="Project Name"></td>
             <td><input type="text" required name="url" placeholder="URL"></td>
-            <td><button type="submit">Save</button></td>
+            <td>
+                <button type="submit"><i class="fas fa-save"></i></button>
+                <button type="reset"><i class="fas fa-undo"></i></button>
+            </td>
 
         </tfoot>
     </table>
