@@ -1,11 +1,42 @@
+const API = { 
+    CREATE: {
+        URL: "http://localhost:3000/teams/create",
+        METHOD: "POST"
+    },
+    READ : {
+        URL: "http://localhost:3000/teams",
+        METHOD: "GET"
+    },
+    UPDATE: {
+        URL: "http://localhost:3000/teams/update",
+        METHOD: "PUT"
+    },
+    DELETE: {
+        URL: "http://localhost:3000/teams/delete",
+        METHOD: "DELETE"
+    }
+};
+
 let allTeams = [];
 let editId;
 
+// for demo purposes ... 
+if(true || location.host === "sljbogdan.github.io") {
+    API.READ.URL = "data/teams.json";
+    API.DELETE.URL = "data/delete.json";
+    API.CREATE.URL = "data/create.json";
+    API.UPDATE.URL = "data/update.json";
+
+    API.DELETE.METHOD = "GET";
+    API.CREATE.METHOD = "GET";
+    API.UPDATE.METHOD = "GET";
+}
+
+
 function loadTeams(){
-    fetch("http://localhost:3000/teams")
+    fetch(API.READ.URL)
         .then(r => r.json())
         .then(teams => {
-            console.warn("teams", teams)
             allTeams = teams;
             displayTeams(teams);
         })
@@ -59,12 +90,12 @@ function setTeamValues(team){
 }
 
 function saveTeam(team){
-    fetch("http://localhost:3000/teams/create", {
+    fetch(API.CREATE.URL, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(team)
+        body: method === "GET" ? null : JSON.stringify(team)
     })
         .then(r => r.json())
         .then(status => {
@@ -76,12 +107,13 @@ function saveTeam(team){
 }
 
 function deleteTeam(id){
-    fetch("http://localhost:3000/teams/delete", {
+    const method = API.UPDATE.METHOD;
+    fetch(API.DELETE.URL, {
     method: "DELETE",
     headers: {
         "Content-Type": "application/json"
     },
-    body: JSON.stringify({id:id})
+    body: method === "GET" ? null : JSON.stringify({ id })
     })
         .then(r => r.json())
         .then(status => {
@@ -92,12 +124,13 @@ function deleteTeam(id){
 }
 
 function updateTeam(team){
-    fetch("http://localhost:3000/teams/update", {
+    const method = API.UPDATE.METHOD;
+    fetch(API.UPDATE.URL, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(team)
+        body: method === "GET" ? null : JSON.stringify(team)
     })
     .then(r => r.json())
     .then(status => {
