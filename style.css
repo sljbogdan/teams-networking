@@ -16,7 +16,7 @@ header{
     flex-direction: row;
     align-items: center;
     border: 1px solid #fff;
-    background-color: #1d1d28;
+    background-color: #161b22;
     border-radius: 10px;
 }
 
@@ -43,15 +43,19 @@ body section{
 }
 
 #job-title {
-    color: #ffffff;
+    color: #c9d1d9;
     margin: 5px 0;
     font-weight: 100;
     font-size: 1.2em;
 }
 
+section input{
+    background-color: #ccd2d8;
+}
+
 body{
     margin: 0;
-    background-color: #060616;
+    background-color: #0d1117;
     min-height:  100%;
     display:flex;
     flex-direction: column;
@@ -62,11 +66,11 @@ body{
 }
 
 tfoot input{
-    background-color: rgba(255, 255, 255, 0.926);
+    background-color: #ccd2d8;
 }
 
 tbody a{
-    color: rgba(255, 255, 255, 0.811);
+    color: #c9d1d9;
     text-decoration: none;
     padding: 2px 5px;
     border-radius: 0.2em;
@@ -88,18 +92,18 @@ tbody a:hover{
 }
 
 tbody{
-    color: rgba(255, 255, 255, 0.811);
+    color: #c9d1d9;
 }
 
 #title{
     text-align: left;
     margin-left: 20px;
-    color: white;
+    color: #58a6ff;
 }
 
 #table thead {
     font-weight: bold;
-    color: white;
+    color: #58a6ff;
 }
 
 #table td,th {
@@ -143,5 +147,5 @@ footer p{
     color: rgba(255, 255, 255, 0.811);
     padding: 10px;
     margin: 0px;
-    background-color: #1d1d28;
+    background-color: #161b22;
 }
