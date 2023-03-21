@@ -2,35 +2,35 @@
     {
         "id": "01",
         "promotion": "1" , 
-        "members": "Salajan Bogdan <br> Paula Bonat",
+        "members": "Salajan Bogdan, Paula Bonat",
         "name": "Demo",
         "url": "https://github.com/sljbogdan/teams-networking"
     },
     {
         "id": "02",
         "promotion": "2" , 
-        "members": "Ovidiu Muresan <br> Alexandra Pop",
+        "members": "Ovidiu Muresan, Alexandra Pop",
         "name": "Demo",
         "url": "https://github.com/sljbogdan/teams-networking"
     },
     {
         "id": "03",
         "promotion": "3" , 
-        "members": "Andrei Ilies <br> Iulia Muresan",
+        "members": "Andrei Ilies, Iulia Muresan",
         "name": "Demo",
         "url": "https://github.com/sljbogdan/teams-networking"
     },
     {
         "id": "04",
         "promotion": "4" , 
-        "members": "Costin Alexandru <br> Alexandra Mera",
+        "members": "Costin Alexandru, Alexandra Mera",
         "name": "Demo",
         "url": "https://github.com/sljbogdan/teams-networking"
     },
     {
         "id": "05",
         "promotion": "5" , 
-        "members": "Salajan Ariana <br> Bilt Gabriel",
+        "members": "Salajan Ariana, Bilt Gabriel",
         "name": "Demo",
         "url": "https://github.com/sljbogdan/teams-networking"
     }

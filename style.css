@@ -1,16 +1,110 @@
+html{
+    height: 100%;
+}
+
 #table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 6px;
+}
+
+body section{
+    padding: 10px;
+}
+
+#job-title {
+    color: #ffffff;
+    margin: 5px 0;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+body{
+    margin: 5px 0;
+    background-color: #060616;
+    min-height:  100%;
+    display:flex;
+    flex-direction: column;
+}
+
+#search-btn{
+    padding-bottom: 3px;
+}
+
+tfoot input{
+    background-color: rgba(255, 255, 255, 0.926);
+}
+
+tbody a{
+    color: rgba(255, 255, 255, 0.811);
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 0.2em;
+    transition: 0.5s;
+}
+
+.delete-btn:hover{
+    color: rgb(154, 47, 47);
+}
+
+.edit-btn:hover{
+    color: #90ca90
+}
+
+tbody a:hover{
+    text-decoration: underline;
+    background-color: #242428;
+
+}
+
+tbody{
+    color: rgba(255, 255, 255, 0.811);
+}
+
+#title{
+    text-align: left;
+    margin-left: 20px;
+    color: white;
+}
+
+header, body > section{
+    flex: 1;
+}
+
+header{
+    max-height: 125px;
+}
+
+#header-wrapper{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: #1d1d28;
+    border-radius: 10px;
+}
+
+#header-image {
+    margin: 5px;
+    width: 108px;
+    height: 108px;
+}
+
+#header-image img{
+    width: 95%;
+    border-radius: 100%;
+    border: 4px solid #fff;
 }
 
 #table thead {
     font-weight: bold;
+    color: white;
 }
 
 #table td,th {
     border-style:solid;
-    border-color:rgb(0, 157, 255);
+    border-color:rgb(255, 255, 255);
     border-width: 1px;
     text-align: center;
     padding: 5px;
@@ -21,5 +115,33 @@ button {
 }
 
 .highlight {
-    background-color: yellowgreen;
+    background-color: rgb(209, 143, 11);
+}
+
+tfoot input{
+    width: 95%;
+}
+
+footer a{
+    color: rgba(255, 255, 255, 0.811);
+    vertical-align: top;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 0.2em;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #334455;
+    background-color: #ffffff;
+}
+
+footer p{
+    text-align: center;
+    border-top: #ffffff solid;
+    color: rgba(255, 255, 255, 0.811);
+    padding: 10px;
+    margin: 0px;
+    background-color: #1d1d28;
 }

@@ -4,39 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams-Networking</title>
+    <title>Teams Networking</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Teams-Networking</h1>
-    <input type="text" id="search" placeholder="Search"> <label for="search">&#128270;</label>
-    
-    <form onsubmit="submitTeam();  return false;" onreset="editId = 0">
-    <table id="table">
-        <thead>
-            <tr>
-                <th>Group</th>
-                <th>Members</th>
-                <th>Project Name</th>
-                <th>URL</th>
-                <th></th>
-            </tr>
+    <header>
+        <div id="header-wrapper">
+            <div id="header-image">
+                <img src="image.webp" alt="uploading">
+            </div>
+            <div>
+                <h1 id="title">Teams Networking</h1>
+                <h2 id="job-title">
+                    CRUD operations example (<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate,
+                    <strong>D</strong>elete)
+                </h2>
+            </div>
+        </div>
         
-        <tbody>
-        </tbody>
-        <tfoot>
-            <td><input type="text" required name="promotion" placeholder="Promotion"></td>
-            <td><input type="text" required name="members" placeholder="Members"></td>
-            <td><input type="text" required name="name" placeholder="Project Name"></td>
-            <td><input type="text" required name="url" placeholder="URL"></td>
-            <td>
-                <button type="submit">Save</button>
-                <button type="reset">Reset</button>
-            </td>
+    </header>
+    
+    <section>
+        <div id="search-btn">
+            <input type="text" id="search" placeholder="Search"> <label for="search">&#128270;</label>
+        </div>   
+        
+        <form onsubmit="submitTeam();  return false;" onreset="editId = 0">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Group</th>
+                    <th>Members</th>
+                    <th>Project Name</th>
+                    <th>URL</th>
+                    <th></th>
+                </tr>
 
-        </tfoot>
-    </table>
-    </form>
+            <tbody>
+            </tbody>
+            
+            <tfoot>
+                <td><input type="text" required name="promotion" placeholder="Promotion"></td>
+                <td><input type="text" required name="members" placeholder="Members"></td>
+                <td><input type="text" required name="name" placeholder="Project Name"></td>
+                <td><input type="text" required name="url" placeholder="URL"></td>
+                <td>
+                    <button type="submit">Save</button>
+                    <button type="reset">Reset</button>
+                </td>
+    
+            </tfoot>
+        </table>
+        </form>
+    </section>
+   <footer>
+    <p>
+        <a href="https://www.linkedin.com/in/bogdan-salajan-83167424a/">Linkedin</a>
+        |
+        <a href="https://github.com/sljbogdan">Github</a>
+    </p>
+   </footer>
 
 <script src="function.js"></script>
 </body>
