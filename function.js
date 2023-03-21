@@ -20,8 +20,11 @@ const API = {
 let allTeams = [];
 let editId;
 
+const isDemo = true || location.host === "sljbogdan.github.io";
+const inlineChanges = isDemo;
+
 // for demo purposes ... 
-if(true || location.host === "sljbogdan.github.io") {
+if(isDemo) {
     API.READ.URL = "data/teams.json";
     API.DELETE.URL = "data/delete.json";
     API.CREATE.URL = "data/create.json";
@@ -99,9 +102,14 @@ function saveTeam(team){
         body: method === "GET" ? null : JSON.stringify(team)
     })
         .then(r => r.json())
-        .then(status => {
-            if(status.success){
-                loadTeams();
+        .then(r => {
+            if(r.success){
+                if(inlineChanges){
+                    allTeams = [...allTeams, { ...team, id: r.id }];
+                    displayTeams(allTeams);
+                } else {
+                    loadTeams();
+                }
                 document.querySelector('form').reset();
             }
         });
@@ -119,7 +127,12 @@ function deleteTeam(id){
         .then(r => r.json())
         .then(status => {
             if(status.success){
-                loadTeams();
+                if(inlineChanges){
+                    allTeams = allTeams.filter(team => team.id !== id);
+                    displayTeams(allTeams);
+                } else {
+                    loadTeams();
+                }
             }
         });
 }
@@ -136,7 +149,12 @@ function updateTeam(team){
     .then(r => r.json())
     .then(status => {
         if(status.success){
-            loadTeams();
+            if(inlineChanges){
+                allTeams = allTeams.map(t => (t.id === editId ? team : t));
+                displayTeams(allTeams);
+            } else {
+                loadTeams();
+            }
             document.querySelector('form').reset();
             editId = 0; 
         }
