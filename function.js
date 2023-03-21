@@ -90,8 +90,9 @@ function setTeamValues(team){
 }
 
 function saveTeam(team){
+    const method = API.CREATE.METHOD;
     fetch(API.CREATE.URL, {
-        method: "POST",
+        method,
         headers: {
             "Content-Type": "application/json"
         },
@@ -107,9 +108,9 @@ function saveTeam(team){
 }
 
 function deleteTeam(id){
-    const method = API.UPDATE.METHOD;
+    const method = API.DELETE.METHOD;
     fetch(API.DELETE.URL, {
-    method: "DELETE",
+    method,
     headers: {
         "Content-Type": "application/json"
     },
@@ -126,7 +127,7 @@ function deleteTeam(id){
 function updateTeam(team){
     const method = API.UPDATE.METHOD;
     fetch(API.UPDATE.URL, {
-        method: "PUT",
+        method,
         headers: {
             "Content-Type": "application/json"
         },
