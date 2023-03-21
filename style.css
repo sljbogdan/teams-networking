@@ -2,6 +2,36 @@ html{
     height: 100%;
 }
 
+header, body > section{
+    flex: 1;
+}
+
+header{
+    max-height: 125px;
+}
+
+#header-wrapper{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: #1d1d28;
+    border-radius: 10px;
+}
+
+#header-image {
+    margin: 5px;
+    width: 108px;
+    height: 108px;
+}
+
+#header-image img{
+    width: 95%;
+    border-radius: 100%;
+    border: 4px solid #fff;
+}
+
 #table {
     border-collapse: collapse;
     width: 100%;
@@ -20,7 +50,7 @@ body section{
 }
 
 body{
-    margin: 5px 0;
+    margin: 0;
     background-color: #060616;
     min-height:  100%;
     display:flex;
@@ -65,36 +95,6 @@ tbody{
     text-align: left;
     margin-left: 20px;
     color: white;
-}
-
-header, body > section{
-    flex: 1;
-}
-
-header{
-    max-height: 125px;
-}
-
-#header-wrapper{
-    margin:10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid #fff;
-    background-color: #1d1d28;
-    border-radius: 10px;
-}
-
-#header-image {
-    margin: 5px;
-    width: 108px;
-    height: 108px;
-}
-
-#header-image img{
-    width: 95%;
-    border-radius: 100%;
-    border: 4px solid #fff;
 }
 
 #table thead {
