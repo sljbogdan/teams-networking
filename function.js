@@ -52,17 +52,22 @@ function highlight(text, search){
 }
 
 function getTeamsAsHTML(teams, search){
+    
     return teams.map(team => {
-        return `<tr>
-                <td>${highlight(team.promotion, search)}</td>
-                <td>${highlight(team.members, search)}</td>
-                <td>${highlight(team.name, search)}</td>
-                <td>${highlight(team.url, search)}</td>
-                <td>
-                    <a href="#" class="delete-btn" data-id="${team.id}">&#10006;</a>
-                    <a href="#" class="edit-btn" data-id="${team.id}">&#9998;</a>
-                </td>
-                </tr>`
+        const url = team.url;
+        const displayUrl = url ? (url.includes("//github.com/") ? url.replace("https://github.com/", "") : "view") : "";
+            return `<tr>
+                    <td>${highlight(team.promotion, search)}</td>
+                    <td>${highlight(team.members, search)}</td>
+                    <td>${highlight(team.name, search)}</td>
+                    <td>
+                    <a target="_blank" href="${url}">${highlight(displayUrl, search)}</a>
+                    </td>
+                    <td>
+                        <a href="#" class="delete-btn" data-id="${team.id}">&#10006;</a>
+                        <a href="#" class="edit-btn" data-id="${team.id}">&#9998;</a>
+                    </td>
+                    </tr>`
     }).join('');
 }
 

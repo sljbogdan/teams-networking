@@ -1,14 +1,38 @@
 [
     {
+        "id": "01",
         "promotion": "1" , 
         "members": "Salajan Bogdan <br> Paula Bonat",
-        "name": "Unkonwn",
-        "url": "https://www.linkedin.com/in/bogdan-salajan-83167424a/"
+        "name": "Demo",
+        "url": "https://github.com/sljbogdan/teams-networking"
     },
     {
+        "id": "02",
         "promotion": "2" , 
         "members": "Ovidiu Muresan <br> Alexandra Pop",
-        "name": "Unkonwn",
-        "url": "https://www.linkedin.com/in/bogdan-salajan-83167424a/"
+        "name": "Demo",
+        "url": "https://github.com/sljbogdan/teams-networking"
+    },
+    {
+        "id": "03",
+        "promotion": "3" , 
+        "members": "Andrei Ilies <br> Iulia Muresan",
+        "name": "Demo",
+        "url": "https://github.com/sljbogdan/teams-networking"
+    },
+    {
+        "id": "04",
+        "promotion": "4" , 
+        "members": "Costin Alexandru <br> Alexandra Mera",
+        "name": "Demo",
+        "url": "https://github.com/sljbogdan/teams-networking"
+    },
+    {
+        "id": "05",
+        "promotion": "5" , 
+        "members": "Salajan Ariana <br> Bilt Gabriel",
+        "name": "Demo",
+        "url": "https://github.com/sljbogdan/teams-networking"
     }
+
 ] 
